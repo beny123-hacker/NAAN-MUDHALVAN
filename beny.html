@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Web App</title>
+</head>
+<body style="font-family: Arial; margin: 20px;">
+
+  <h1 style="color: darkblue;">🌐 My Simple Web App</h1>
+
+  <!-- Navigation Menu -->
+  <nav style="margin-bottom: 20px;">
+    <a href="#home">Home</a> | 
+    <a href="#about">About</a> | 
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome!</h2>
+    <p>This is a simple demo web app using just HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>This app lets you enter your name and see a greeting message.</p>
+  </section>
+
+  <!-- Contact / Form Section -->
+  <section id="contact" style="margin-top: 20px;">
+    <h2>Try It Out</h2>
+    <form onsubmit="showMessage(); return false;">
+      <label for="name">Enter your name:</label><br>
+      <input type="text" id="name" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="output" style="color: green; font-weight: bold; margin-top: 10px;"></p>
+  </section>
+
+  <script>
+    function showMessage() {
+      let name = document.getElementById("name").value;
+      document.getElementById("output").innerText = "Hello, " + name + "! 🎉";
+    }
+  </script>
+
+</body>
+</html>
